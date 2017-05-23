@@ -54,13 +54,13 @@
         android:layout_alignLeft="@+id/IDeditText"
         android:layout_alignStart="@+id/IDeditText"
         android:layout_marginTop="10dp"
-        android:id="@+id/editText4" />
+        android:id="@+id/PWeditText" />
 
     <CheckBox
         android:text="记住密码"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText4"
+        android:layout_below="@+id/PWeditText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="11dp"
@@ -144,7 +144,8 @@
         android:layout_toRightOf="@+id/TimetextView"
         android:layout_toEndOf="@+id/TimetextView"
         android:layout_marginLeft="31dp"
-        android:layout_marginStart="31dp">
+        android:layout_marginStart="31dp"
+        android:id="@+id/radioGroup">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -179,4 +180,14 @@
         android:id="@+id/Connectbutton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="response"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Connectbutton"
+        android:layout_alignRight="@+id/radioGroup"
+        android:layout_alignEnd="@+id/radioGroup"
+        android:layout_marginBottom="34dp"
+        android:id="@+id/ResponseTextView" />
 </RelativeLayout>
