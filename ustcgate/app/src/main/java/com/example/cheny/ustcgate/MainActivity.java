@@ -1,7 +1,9 @@
 package com.example.cheny.ustcgate;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -16,6 +18,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -42,12 +45,14 @@ public class MainActivity extends AppCompatActivity {
     private Button ConButton;
     private TextView ResponseText;
     private RadioGroup type,exp;
+    private CheckBox checkSave;
     private HttpGet httpGet;
     private HttpClient httpClient;
     private HttpPost httpPost;
     private HttpResponse Response;
     private String Cookie_rn;   //用来标识会话的Cookie
     private String userip;
+    private String PREFERENCE_NAME = "survey";
 
     private Handler handler = new Handler(){
 
@@ -84,6 +89,16 @@ public class MainActivity extends AppCompatActivity {
         ResponseText = (TextView)findViewById(R.id.ResponseTextView);
         type = (RadioGroup)findViewById(R.id.OutRadioGroup);
         exp = (RadioGroup)findViewById(R.id.radioGroup);
+        checkSave = (CheckBox)findViewById(R.id.SavePWcheckBox);
+
+        SharedPreferences sharedPreferences = getSharedPreferences(
+                PREFERENCE_NAME,Activity.MODE_PRIVATE);
+        idEdit.setText(sharedPreferences.getString("userid",""));
+        checkSave.setChecked(sharedPreferences.getBoolean("checked",false));
+        if(checkSave.isChecked()){
+            pwEdit.setText(sharedPreferences.getString("userpw",""));
+        }
+
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET)
                 != PackageManager.PERMISSION_GRANTED){
             //申请INTERNET权限
@@ -262,5 +277,17 @@ public class MainActivity extends AppCompatActivity {
                 handler.sendMessage(msg);
             }
         }
+    }
+    protected void onStop(){
+        SharedPreferences sharedPreferences = getSharedPreferences(
+                PREFERENCE_NAME, Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("userid",idEdit.getText().toString());
+        editor.putBoolean("checked",checkSave.isChecked());
+        if(checkSave.isChecked()){
+            editor.putString("userpw",pwEdit.getText().toString());
+        }
+        editor.commit();
+        super.onStop();
     }
 }

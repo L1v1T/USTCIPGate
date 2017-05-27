@@ -64,21 +64,21 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="11dp"
-        android:id="@+id/RestorePWcheckBox" />
+        android:id="@+id/SavePWcheckBox" />
 
     <TextView
         android:text="出口"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/OuttextView"
-        android:layout_below="@+id/RestorePWcheckBox"
+        android:layout_below="@+id/SavePWcheckBox"
         android:layout_alignLeft="@+id/textView13"
         android:layout_alignStart="@+id/textView13" />
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/RestorePWcheckBox"
+        android:layout_below="@+id/SavePWcheckBox"
         android:layout_toRightOf="@+id/IDtextView"
         android:layout_toEndOf="@+id/IDtextView"
         android:id="@+id/OutRadioGroup">
@@ -135,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/TimetextView"
-        android:layout_below="@+id/RestorePWcheckBox"
+        android:layout_below="@+id/SavePWcheckBox"
         android:layout_centerHorizontal="true" />
 
     <RadioGroup
