@@ -86,47 +86,48 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Outradio1"
-            android:text="出口1"/>
+            android:text="教育网"
+            android:checked="true" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Outradio2"
-            android:text="出口2"/>
+            android:text="电信网"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Outradio3"
-            android:text="出口3"/>
+            android:text="联通网"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Outradio4"
-            android:text="出口4"/>
+            android:text="电信网2"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Outradio5"
-            android:text="出口5"/>
+            android:text="联通网2"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Outradio6"
-            android:text="出口6"/>
+            android:text="电信网3"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Outradio7"
-            android:text="出口7"/>
+            android:text="联通网3"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Outradio8"
-            android:text="出口8"/>
+            android:text="教育网2"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Outradio9"
-            android:text="出口9"/>
+            android:text="移动测试"/>
     </RadioGroup>
 
     <TextView
@@ -155,17 +156,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Timeradio2"
-            android:text="4小时"/>
+            android:text="4小时"
+            android:checked="true" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Timeradio3"
-            android:text="8小时"/>
+            android:text="11小时"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Timeradio4"
-            android:text="11小时"/>
+            android:text="14小时"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
